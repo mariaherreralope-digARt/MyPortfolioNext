@@ -1,0 +1,150 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { BsChevronLeft, BsChevronRight, BsBoxArrowUpRight } from "react-icons/bs";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+
+const projects = [
+  {
+    id: 1,
+    title: "Creative Portfolio Website",
+    image: "/images/project1.png",
+    description:
+      "Luxury Retreats is a visually immersive web experience designed to showcase art-inspired wellness retreats. The project focuses on blending elegant design with smooth, interactive motion. Built with Next.js and Framer Motion, the site features dynamic transitions, responsive layouts, and a clean, modern aesthetic. Its gradient palette, soft animations, and intuitive structure guide visitors through curated retreat experiences that combine art, mindfulness, and relaxation.",
+    demoLink: "https://retreats.digitalartmariaherrera.com/",
+  },
+  {
+    id: 2,
+    title: "E-Commerce Storefront",
+    image: "/images/projects/project2.png",
+    description:
+      "A modern e-commerce platform with smooth animations, product filtering, and secure checkout built using React and Stripe.",
+    demoLink: "https://example.com/project2",
+  },
+  // {
+  //   id: 3,
+  //   title: "Event Planner Landing Page",
+  //   image: "/images/projects/project3.png",
+  //   description:
+  //     "A dynamic one-page website for event planners, optimized for conversions and mobile performance.",
+  //   demoLink: "https://example.com/project3",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Photography Showcase",
+  //   image: "/images/projects/project4.png",
+  //   description:
+  //     "A visually immersive gallery site showcasing high-resolution photography with parallax scrolling effects.",
+  //   demoLink: "https://example.com/project4",
+  // },
+];
+
+const Projects = () => {
+  return (
+    <section
+      id="projects"
+      className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
+    >
+      {/* Title */}
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-300">
+          Featured Projects
+        </h2>
+        <p className="text-slate-100 max-w-2xl mx-auto">
+          A selection of recent projects that showcase my expertise in front-end development,
+          UI animation, and design.
+        </p>
+      </motion.div>
+
+      {/* Swiper Carousel */}
+      <motion.div className="relative">
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={30}
+          navigation={{
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
+          }}
+          className="projects-swiper md:mb-12"
+        >
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 250 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gradient-to-b from-transparent via-emerald-500/20 to-emerald-500/40 border-2 border-yellow-400/40 rounded-2xl overflow-hidden shadow-lg p-6"
+              >
+                {/* LEFT: Screenshot */}
+                <div className="relative w-full h-64 md:h-96 rounded-lg flex items-center justify-centeroverflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={500}
+                    className=" hover:scale-105 transition-transform duration-500"
+                    priority={project.id === 1}
+                  />
+                </div>
+
+                {/* RIGHT: Content */}
+                <div className="flex flex-col justify-center text-center md:text-left space-y-4 px-2">
+                  <h3 className="text-2xl font-semibold text-slate-200">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-100 text-base leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <Link
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center md:justify-start gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl transition-all duration-300 shadow hover:shadow-lg mt-2"
+                  >
+                    Live Demo <BsBoxArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Custom Navigation Buttons */}
+        <motion.div className="flex justify-center gap-4 mt-8">
+          <motion.button
+            aria-label="Previous project"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="swiper-button-prev-custom w-12 h-12 rounded-full text-yellow-400 flex items-center justify-center hover:bg-emerald-400 bg-emerald-500 hover:text-white cursor-pointer transition-colors"
+          >
+            <BsChevronLeft className="w-6 h-6" />
+          </motion.button>
+          <motion.button
+            aria-label="Next project"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="swiper-button-next-custom w-12 h-12 rounded-full text-yellow-400 flex items-center justify-center hover:bg-emerald-400 bg-emerald-500 hover:text-white cursor-pointer transition-colors"
+          >
+            <BsChevronRight className="w-6 h-6" />
+          </motion.button>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Projects;

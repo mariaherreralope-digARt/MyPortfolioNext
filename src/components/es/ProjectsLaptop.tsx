@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactModal from "@/components/en/ContactFormModal";
+import ContainerComputer from "./Laptop/ContainerComputer";
 
 const ProjectsLaptop = () => {
   const [contactFormOpen, setContactFormOpen] = useState(false);
@@ -43,20 +44,7 @@ const ProjectsLaptop = () => {
           variants={slideInRight}
         >
           <div className="relative w-[500px] md:h-[250px] h-[180px] mx-auto overflow-hidden">
-            <Image src="/images/laptopMockup.png" alt="Animated Sites" 
-            fill
-            className="z-10" />
-            <div
-              className="absolute top-[20px] md:left-[124px] left-[75px] md:w-[245px] w-[145px] md:h-[165px] h-[75px] overflow-x-scroll rounded-[5px] scrollbar-hide"
-              aria-label="Desktop site screenshot preview"
-            >
-              <Image
-                src="/images/laptopSite.png"
-                alt="Desktop site screenshot"
-                fill
-                className="relative object-cover"
-              />
-            </div>
+            <ContainerComputer />
           </div>
         </motion.div>
 

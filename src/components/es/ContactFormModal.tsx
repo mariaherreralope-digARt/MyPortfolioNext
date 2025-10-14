@@ -50,7 +50,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
             {/* Input Forms */}
             <form
-              action="https://formsubmit.co/mariaherreralope@gmail.com"
+              action="https://formsubmit.co/digartmariaherrera@gmail.com"
               method="POST"
               className="space-y-4"
             >

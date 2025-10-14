@@ -72,19 +72,26 @@ const PricingCards = () => {
   return (
     <div
       id="services"
-      className="mx-auto max-w-7xl pt-5 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0c0c1d] to-[#111132]"
+      className="w-full mx-auto max-w-screen-2xl 
+      px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 
+      py-16 sm:py-20 md:py-28 lg:py-32
+       bg-gradient-to-t from-[#0c0c1d] to-[#111132]"
     >
-      <h2 className="text-md font-extrabold text-slate-100 sm:text-xl sm:leading-tight sm:tracking-tight text-center">
+      <h2 className="text-slate-100 font-medium
+        text-center mt-6 pb-4
+        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
+        leading-snug sm:leading-tight sm:tracking-tight">
         Flexible Website Packages — Built for Your Business, Your Way
       </h2>
-      <p className="mt-2 text-center text-sm pt-2 md:pt-0 text-slate-300">
+      <p className=" text-center mt-4 max-w-2xl text-base sm:text-lg md:text-xl text-slate-300
+      pb-12 mx-auto">
         Whether you just need a simple one-page site or a fully managed online
         presence, choose the plan that matches your goals and budget. No hidden
         fees, no tech stress.
       </p>
 
       {/* Cards */}
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 py-5 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 py-5 ">
         {pricingPlans.map((plan) => (
           <div
             key={plan.title}

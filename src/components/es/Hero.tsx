@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
 
         {/* Scrolling background text */}
         <motion.div
-          className="absolute text-[50vh] bottom-[-120px] whitespace-nowrap text-[#fdf4f418] w-max font-bold pointer-events-none z-0 pb-20"
+          className="absolute text-[50vh] md:bottom-[-120px] bottom-[-280px] whitespace-nowrap text-[#fdf4f418] w-max font-bold pointer-events-none z-0 pb-20"
           initial={{ x: 850, opacity: 0 }}
           whileInView={{
             x: '-220%',

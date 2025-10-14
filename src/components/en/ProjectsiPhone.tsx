@@ -73,7 +73,7 @@ const ProjectsiPhone = () => {
 
         {/* RIGHT COLUMN */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center pt-7 md:pt-40"
+          className="w-full md:w-1/2 flex justify-center pt-7 md:pt-10"
           variants={slideInRight}
         >
           <div className="relative w-[300px] md:h-[450px] h-[400px] mx-auto">

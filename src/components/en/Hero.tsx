@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative w-full md:h-screen flex bg-gradient-to-b from-[#0c0c1d] to-[#111132] px-6 md:px-16 overflow-hidden"
+      className="relative w-full md:h-screen flex bg-gradient-to-b from-[#0c0c1d] to-[#111132] px-6 md:px-16 overflow-hidden py-16"
     >
       {/* Content Wrapper */}
       <motion.div
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
         whileInView="show"
       >
         {/* LEFT COLUMN */}
-        <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 px-10 pt-7 md:pt-0">
+        <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 max-w-7xl pt-5 px-4 sm:px-6 lg:px-8">
           <motion.h2
             className="text-lg text-emerald-400 uppercase font-extralight tracking-widest cursor-default"
             variants={fadeUp}
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
 
         {/* Scrolling background text */}
         <motion.div
-          className="absolute text-[50vh] bottom-[-120px] whitespace-nowrap text-[#fdf4f418] w-max font-bold pointer-events-none z-0 pb-20"
+          className="absolute text-[50vh] md:bottom-[-120px] bottom-[-280px] whitespace-nowrap text-[#fdf4f418] w-max font-bold pointer-events-none z-0 pb-20"
           initial={{ x: 850, opacity: 0 }}
           whileInView={{
             x: '-220%',

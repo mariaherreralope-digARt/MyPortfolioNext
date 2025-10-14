@@ -43,7 +43,7 @@ const ProjectsLaptop = () => {
           className="w-full md:w-1/2 flex justify-center pt-7"
           variants={slideInRight}
         >
-          <div className="relative w-[500px] md:h-[250px] h-[180px] mx-auto overflow-hidden">
+          <div className="relative w-[500px] md:h-[450px] h-[280px] mx-auto flex items-center justify-center mb-10">
             <ContainerComputer />
           </div>
         </motion.div>

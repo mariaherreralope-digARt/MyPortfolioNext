@@ -17,7 +17,7 @@ const NavbarES: React.FC = () => {
     { href: "#about", label: "Sobre Mí" },
     { href: "#projects", label: "Proyectos" },
     { href: "#services", label: "Servicios" },
-    { href: "#testimonials", label: "Testimonios" },
+    { href: "#newsletter", label: "Newsletter" },
   ];
 
   return (

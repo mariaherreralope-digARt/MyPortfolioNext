@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { FaReact } from 'react-icons/fa';
-import { SiTailwindcss, SiFramer } from 'react-icons/si';
+import { SiTailwindcss, SiFramer, SiNextdotjs, SiJavascript, SiGit, SiTypescript, SiVercel, SiThreedotjs } from 'react-icons/si';
 
 // Animation variants (typed)
 const fadeInUp: Variants = {
@@ -22,11 +22,11 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="md:h-screen flex flex-col justify-center items-center px-6 py-20 bg-gradient-to-t from-[#0c0c1d] to-[#111132] text-center"
+      className="w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-28 lg:py-32 flex flex-col justify-center items-center  bg-gradient-to-t from-[#0c0c1d] to-[#111132] text-center"
     >
       {/* Title */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -41,7 +41,7 @@ const AboutSection: React.FC = () => {
 
       {/* Subtitle */}
       <motion.h2
-        className="text-xl md:text-2xl text-white mt-4 max-w-3xl cursor-default"
+        className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-2xl leading-snug text-white cursor-default"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -54,7 +54,7 @@ const AboutSection: React.FC = () => {
 
       {/* Paragraphs */}
       <motion.p
-        className="mt-8 text-white max-w-2xl cursor-default"
+        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white  cursor-default"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -69,7 +69,7 @@ const AboutSection: React.FC = () => {
       </motion.p>
 
       <motion.p
-        className="mt-4 text-white max-w-2xl cursor-default"
+        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white cursor-default"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -83,7 +83,7 @@ const AboutSection: React.FC = () => {
       </motion.p>
 
       <motion.p
-        className="mt-4 text-white max-w-2xl cursor-default"
+        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white cursor-default"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -97,7 +97,7 @@ const AboutSection: React.FC = () => {
 
       {/* Icons */}
       <motion.div
-        className="flex gap-10 mt-12 text-4xl text-emerald-500"
+        className="flex items-center justify-center w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-28 lg:py-32 gap-4 md:gap-10 text-4xl text-emerald-500"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -107,11 +107,30 @@ const AboutSection: React.FC = () => {
         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
           <FaReact />
         </motion.div>
-        <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
-          <SiTailwindcss />
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiJavascript />
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiNextdotjs />
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiTypescript />
         </motion.div>
         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
           <SiFramer />
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiTailwindcss />
+          
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiThreedotjs />
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiGit />
+        </motion.div>
+         <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+          <SiVercel />
         </motion.div>
       </motion.div>
     </section>

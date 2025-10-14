@@ -12,10 +12,10 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    title: "Creative Portfolio Website",
+    title: "Website de Portfolio Creativo",
     image: "/images/project1.png",
     description:
-      "Luxury Retreats is a visually immersive web experience designed to showcase art-inspired wellness retreats. The project focuses on blending elegant design with smooth, interactive motion. Built with Next.js and Framer Motion, the site features dynamic transitions, responsive layouts, and a clean, modern aesthetic. Its gradient palette, soft animations, and intuitive structure guide visitors through curated retreat experiences that combine art, mindfulness, and relaxation.",
+      "Luxury Retreats es una experiencia web visualmente inmersiva diseñada para mostrar retiros de bienestar inspirados en el arte. El proyecto se centra en combinar un diseño elegante con un movimiento interactivo y fluido. Construido con Next.js y Framer Motion, el sitio presenta transiciones dinámicas, diseños responsivos y una estética limpia y moderna. Su paleta de degradados, animaciones suaves y estructura intuitiva guían a los visitantes a través de experiencias de retiro cuidadosamente curadas que combinan arte, mindfulness y relajación.",
     demoLink: "https://retreats.digitalartmariaherrera.com/",
   },
   {
@@ -48,30 +48,21 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full mx-auto max-w-screen-2xl 
-      px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 
-      py-16 sm:py-20 md:py-28 lg:py-32
-      bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
+      className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
     >
       {/* Title */}
       <motion.div
-        className=""
+        className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-slate-100 font-medium
-        text-center mt-6 pb-4
-        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
-        leading-snug sm:leading-tight sm:tracking-tight">
-          Featured Projects
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-300">
+          Projectos
         </h2>
-        <p className="text-slate-300 text-center
-mt-4 max-w-2xl text-base sm:text-lg md:text-xl
-pb-12
-">
-          A selection of recent projects that showcase my expertise in front-end development,
-          UI animation, and design.
+        <p className="text-slate-100 max-w-2xl mx-auto">
+          Una selección de proyectos recientes que muestran mi experiencia en desarrollo front-end,
+          animación de UI y diseño.
         </p>
       </motion.div>
 
@@ -93,9 +84,9 @@ pb-12
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <motion.div
-                // whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 250 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8  rounded-2xl overflow-hidden shadow-lg "
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gradient-to-b from-transparent via-emerald-500/20 to-emerald-500/40 border-2 border-yellow-400/40 rounded-2xl overflow-hidden shadow-lg p-6"
               >
                 {/* LEFT: Screenshot */}
                 <div className="relative w-full h-64 md:h-96 rounded-lg flex items-center justify-centeroverflow-hidden">
@@ -110,17 +101,11 @@ pb-12
                 </div>
 
                 {/* RIGHT: Content */}
-                <div className="flex flex-col justify-center text-justify md:text-left space-y-4">
-                  <h2 className="text-slate-100 font-medium
-        
-        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
-        leading-snug sm:leading-tight sm:tracking-tight
-">
+                <div className="flex flex-col justify-center text-justify md:text-left space-y-4 px-2">
+                  <h3 className="text-2xl font-semibold text-slate-200">
                     {project.title}
-                  </h2>
-                  <p className="text-slate-300 text-justify
-mt-4 max-w-2xl text-base sm:text-lg md:text-xl
-">
+                  </h3>
+                  <p className="text-slate-100 text-base leading-relaxed">
                     {project.description}
                   </p>
 

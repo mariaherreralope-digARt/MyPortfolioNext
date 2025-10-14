@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { FaReact } from 'react-icons/fa';
-import { SiTailwindcss, SiFramer } from 'react-icons/si';
+import { SiTailwindcss, SiFramer, SiJavascript, SiNextdotjs, SiTypescript, SiThreedotjs, SiGit, SiVercel } from 'react-icons/si';
 
 // Animation variants (typed)
 const fadeInUp: Variants = {
@@ -85,25 +85,44 @@ const AboutMe: React.FC = () => {
        Cuando no estoy programando, me encontrarás explorando tendencias de diseño, viendo tutoriales de desarrollo o imaginando mi próximo proyecto personal. ¡Construyamos algo increíble juntos!
       </motion.p>
 
-      {/* Icons */}
-      <motion.div
-        className="flex gap-10 mt-12 text-4xl text-emerald-500"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        custom={5}
-      >
-        <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
-          <FaReact />
+    {/* Icons */}
+        <motion.div
+          className="flex gap-10 mt-12 text-4xl text-emerald-500"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom={5}
+        >
+          <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <FaReact />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiJavascript />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiNextdotjs />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiTypescript />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiFramer />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiTailwindcss />
+            
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiThreedotjs />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiGit />
+          </motion.div>
+           <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
+            <SiVercel />
+          </motion.div>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
-          <SiTailwindcss />
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.2 }} className="transition-transform duration-300">
-          <SiFramer />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };

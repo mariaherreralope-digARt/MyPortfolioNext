@@ -10,6 +10,7 @@ import PricingCards from "@/components/es/PricingCards";
 import Newsletter from "@/components/es/Newsletter";
 import CookieConsentBanner from "@/components/es/CookieConsentBanner";
 import AboutMe from "@/components/es/AboutMe";
+import Projects from "@/components/es/Projects";
 
 export default function HomePage(): JSX.Element {
   return (
@@ -26,8 +27,9 @@ export default function HomePage(): JSX.Element {
         <AboutMe />
         <ProjectsLaptop />
         <ProjectsiPhone />
+        <Projects />
         <PricingCards />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Newsletter />
         <Footer />
         <CookieConsentBanner />

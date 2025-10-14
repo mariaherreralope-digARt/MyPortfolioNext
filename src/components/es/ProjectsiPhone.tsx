@@ -69,28 +69,34 @@ const ProjectsiPhone = () => {
                       </motion.button>
         </div>
 
-        {/* RIGHT COLUMN */}
-        <motion.div
-          className="w-full md:w-1/2 flex justify-center pt-7 md:pt-40"
-          variants={slideInRight}
-        >
-          <div className="relative w-[300px] md:h-[600px] h-[400px] mx-auto overflow-hidden">
-            <Image src="/images/iPhoneMockUp.png" alt="Mobile Responsive" 
-            fill
-            className="z-10" />
-            <div
-              className="absolute top-[39px] left-[64px] w-[175px] md:h-[375px] h-[365px] overflow-y-scroll rounded-[22px] scrollbar-hide"
-              aria-label="Mobile site screenshot preview"
-            >
+         {/* RIGHT COLUMN */}
+          <motion.div
+            className="w-full md:w-1/2 flex justify-center pt-7 md:pt-10"
+            variants={slideInRight}
+          >
+            <div className="relative w-[300px] md:h-[450px] h-[400px] mx-auto">
+              {/* Mockup background */}
               <Image
-                src="/images/mobileSite.png"
-                alt="Mobile site screenshot"
+                src="/images/iPhoneMockUp.png"
+                alt="Mobile Mockup"
                 fill
-                className="relative object-cover"
+                className="z-10 object-contain"
               />
+  
+              {/* Screen viewport */}
+              <div
+                className="absolute top-[39px] left-[64px] w-[175px] md:h-[375px] h-[265px] overflow-y-auto rounded-[22px] z-20 no-scrollbar"
+                aria-label="Mobile site screenshot preview"
+                style={{ WebkitOverflowScrolling: "touch", touchAction: "pan-y" }}
+              >
+                <img
+                  src="/images/mobileSite.png"
+                  alt="Mobile site screenshot"
+                  style={{ display: "block", width: "100%", height: "auto" }}
+                />
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
       </motion.div>
 
       {/* Render modal when open */}

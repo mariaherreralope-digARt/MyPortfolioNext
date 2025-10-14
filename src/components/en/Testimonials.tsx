@@ -45,7 +45,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
+      className="py-16 max-w-7xl pt-5 px-4 sm:px-6 lg:px-8 mx-auto bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
     >
       <motion.div className="text-center mb-12">
         <motion.h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-300">

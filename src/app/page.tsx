@@ -26,8 +26,9 @@ export default function HomePage(): JSX.Element {
         <AboutMe />
         <ProjectsLaptop />
         <ProjectsiPhone />
-        <PricingCards />
+        
         <Projects />
+        <PricingCards />
         {/* <Testimonials /> */}
         <Newsletter />
         <Footer />

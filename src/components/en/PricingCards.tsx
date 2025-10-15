@@ -8,7 +8,7 @@ const pricingPlans = [
     title: "One-Time Payment, No Client Edits",
     clientType:
       "Ideal for: Very small businesses that rarely update their site.",
-    price: "300 - 600",
+    price: "800 - 1000",
     currency: "EUR",
     frequency: "One-Time Payment",
     deliveryTime: "1 week",
@@ -28,7 +28,7 @@ const pricingPlans = [
   {
     title: "Client Can Edit Content",
     clientType: "Ideal for: Clients who want to update text/images themselves.",
-    price: "600 - 1000",
+    price: "1000 - 1500",
     currency: "EUR",
     frequency: "One-Time Payment",
     deliveryTime: "10 days",
@@ -49,7 +49,7 @@ const pricingPlans = [
     title: "Full Support + Maintenance",
     clientType:
       "This is the VIP plan. You focus on your business, I handle the tech. You get edits, backups, and full support — no worries.",
-    price: "1000+",
+    price: "1500+",
     currency: "EUR",
     frequency: "One-Time Payment",
     deliveryTime: "10 days",
@@ -69,29 +69,34 @@ const pricingPlans = [
 ];
 
 const PricingCards = () => {
+     const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
+  };
   return (
     <div
       id="services"
       className="w-full mx-auto max-w-screen-2xl 
-      px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 
-      py-16 sm:py-20 md:py-28 lg:py-32
-       bg-gradient-to-t from-[#0c0c1d] to-[#111132]"
+      px-6 sm:px-10 md:px-16 lg:px-20
+      py-8 md:py-12
+      section-gradient-bl"
     >
-      <h2 className="text-slate-100 font-medium
-        text-center mt-6 pb-4
-        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
-        leading-snug sm:leading-tight sm:tracking-tight">
-        Flexible Website Packages — Built for Your Business, Your Way
+      <div className="flex flex-col items-center justify-center text-center">
+      <h2 className="heading-gradient"
+            variants={fadeUp}
+          >
+        Flexible Website Packages
       </h2>
-      <p className=" text-center mt-4 max-w-2xl text-base sm:text-lg md:text-xl text-slate-300
-      pb-12 mx-auto">
+      <p className="paragraph-muted"
+            variants={fadeUp}
+          >
         Whether you just need a simple one-page site or a fully managed online
         presence, choose the plan that matches your goals and budget. No hidden
         fees, no tech stress.
       </p>
-
+</div>
       {/* Cards */}
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 py-5 ">
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 mt-12 py-5 ">
         {pricingPlans.map((plan) => (
           <div
             key={plan.title}

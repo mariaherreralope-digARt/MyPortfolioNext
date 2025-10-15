@@ -30,7 +30,7 @@ const ProjectsLaptop = () => {
   return (
     <section
       id="projects"
-      className="relative w-full md:h-screen flex bg-gradient-to-b from-[#0c0c1d] to-[#111132] px-6 md:px-16 overflow-hidden"
+      className="section section-gradient-tr overflow-hidden flex items-center justify-center"
     >
       <motion.div
         className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative"
@@ -50,22 +50,22 @@ const ProjectsLaptop = () => {
 
         {/* RIGHT COLUMN - Text */}
         <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 md:px-10 md:pt-0">
-          <motion.h2
-            className="text-lg text-emerald-400 uppercase font-extralight tracking-widest cursor-default mt-10"
+          <motion.h3
+            className="heading-accent cursor-default"
             variants={fadeUp}
           >
             Modern Animated Websites
-          </motion.h2>
+          </motion.h3>
 
-          <motion.h1
-            className="text-4xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent cursor-default"
+          <motion.h2
+            className="heading-gradient"  
             variants={fadeUp}
           >
             Desktop View
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
-            className="text-yellow-300 text-base md:text-lg cursor-default"
+            className="paragraph-muted"
             variants={fadeUp}
           >
             Websites designed for a full desktop experience, featuring smooth
@@ -75,7 +75,7 @@ const ProjectsLaptop = () => {
 
           <motion.button
             onClick={openContactForm}
-            className="mt-4 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-3xl transition-all duration-300 shadow hover:shadow-lg"
+            className="btn-primary"
             variants={fadeUp}
           >
             Let’s Work Together

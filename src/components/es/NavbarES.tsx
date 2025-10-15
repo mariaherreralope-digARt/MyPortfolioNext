@@ -21,8 +21,9 @@ const NavbarES: React.FC = () => {
   ];
 
   return (
-    <motion.nav className="top-0 left-0 right-0 bg-gradient-to-b from-[#111132] to-[#0c0c1d] z-10">
-      <div className="w-full mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-10 h-24 md:h-18">
+    <motion.nav className="sticky top-0 left-0 right-0 section-gradient-bl z-50">
+      <div className="w-full mx-auto flex items-center justify-between max-w-7xl pt-5 px-6 sm:px-10 md:px-16 lg:px-20
+       h-24 md:h-18">
         {/* Logo */}
         <Link href="#home" onClick={() => setActiveLink("#home")} className="flex-shrink-0 px-8">
           <motion.div
@@ -119,8 +120,8 @@ const NavbarES: React.FC = () => {
                 </a>
               ))}
 
-              <Link href="/es" className="block w-full bg-yellow-500 text-white px-2 py-2.5 rounded-xl hover:bg-yellow-400 transition-all hover:shadow-sm hover:shadow-yellow-600">
-                ES
+              <Link href="/" className="block w-full bg-yellow-500 text-white px-2 py-2.5 rounded-xl hover:bg-yellow-400 transition-all hover:shadow-sm hover:shadow-yellow-600">
+                EN
               </Link>
 
               <button

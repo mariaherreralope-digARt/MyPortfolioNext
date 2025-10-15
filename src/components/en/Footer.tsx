@@ -31,8 +31,9 @@ const footerLinks: Record<string, { name: string; href: string }[]> = {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#0c0c1d] to-[#111132]">
-      <div className="w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 py-12 sm:py-16 md:py-28 lg:py-32">
+    <footer className="section-gradient-tr">
+      <div className="w-full mx-auto max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-20
+      pb-8 md:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-4">

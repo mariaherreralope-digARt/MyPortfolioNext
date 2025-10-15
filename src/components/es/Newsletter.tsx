@@ -33,7 +33,8 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter" className="bg-gradient-to-b from-[#111132] to-[#0c0c1d] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+    <section id="newsletter" className="section-gradient-tr w-full mx-auto max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-20
+      py-8 md:py-12">
       <div className="bg-gradient-to-b from-slate-100/40 via-transparent to-slate-100/40 border-2 border-emerald-500 rounded-3xl overflow-hidden">
         <div className="relative md:px-16 py-16 px-6 md:py-15">
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">

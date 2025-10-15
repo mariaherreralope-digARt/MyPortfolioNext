@@ -22,26 +22,32 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-28 lg:py-32 flex flex-col justify-center items-center  bg-gradient-to-t from-[#0c0c1d] to-[#111132] text-center"
+      className=" section section-gradient-bl flex flex-col text-center items-center justify-center md:w-75vw"
     >
       {/* Title */}
-      <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
+      <motion.h2
+        className='heading-gradient'
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         custom={0}
       >
-        👋{' '}
-        <span className="bg-gradient-to-r from-slate-600 to-slate-200 bg-clip-text text-transparent tracking-tight cursor-default">
+       {/* <span
+  className="align-middle mr-2 inline-block"
+  style={{ all: 'unset', fontSize: '2rem', lineHeight: '1', display: 'inline-block' }}
+>
+  👋
+</span> */}
+
+        <span className="">
           Hi! I’m María,
         </span>
-      </motion.h1>
+      </motion.h2>
 
       {/* Subtitle */}
-      <motion.h2
-        className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-2xl leading-snug text-white cursor-default"
+      <motion.h3
+        className="paragraph-accent"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -50,11 +56,11 @@ const AboutSection: React.FC = () => {
       >
         a passionate front-end developer who loves turning ideas into smooth,
         modern websites.
-      </motion.h2>
+      </motion.h3>
 
       {/* Paragraphs */}
       <motion.p
-        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white  cursor-default"
+        className="paragraph-muted"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -69,7 +75,7 @@ const AboutSection: React.FC = () => {
       </motion.p>
 
       <motion.p
-        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white cursor-default"
+        className="paragraph-muted "
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -83,7 +89,7 @@ const AboutSection: React.FC = () => {
       </motion.p>
 
       <motion.p
-        className="mt-4 max-w-6xl text-base sm:text-lg md:text-xl text-white cursor-default"
+        className="paragraph-muted"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -97,7 +103,7 @@ const AboutSection: React.FC = () => {
 
       {/* Icons */}
       <motion.div
-        className="flex items-center justify-center w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 py-16 sm:py-20 md:py-28 lg:py-32 gap-4 md:gap-10 text-4xl text-emerald-500"
+        className="flex items-center justify-center w-full mx-auto max-w-screen-2xl px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 pt-12 gap-4 md:gap-10 text-4xl text-emerald-500"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"

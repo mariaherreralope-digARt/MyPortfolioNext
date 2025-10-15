@@ -18,14 +18,14 @@ const projects = [
       "Luxury Retreats is a visually immersive web experience designed to showcase art-inspired wellness retreats. The project focuses on blending elegant design with smooth, interactive motion. Built with Next.js and Framer Motion, the site features dynamic transitions, responsive layouts, and a clean, modern aesthetic. Its gradient palette, soft animations, and intuitive structure guide visitors through curated retreat experiences that combine art, mindfulness, and relaxation.",
     demoLink: "https://retreats.digitalartmariaherrera.com/",
   },
-  {
-    id: 2,
-    title: "E-Commerce Storefront",
-    image: "/images/projects/project2.png",
-    description:
-      "A modern e-commerce platform with smooth animations, product filtering, and secure checkout built using React and Stripe.",
-    demoLink: "https://example.com/project2",
-  },
+  // {
+  //   id: 2,
+  //   title: "E-Commerce Storefront",
+  //   image: "/images/projects/project2.png",
+  //   description:
+  //     "A modern e-commerce platform with smooth animations, product filtering, and secure checkout built using React and Stripe.",
+  //   demoLink: "https://example.com/project2",
+  // },
   // {
   //   id: 3,
   //   title: "Event Planner Landing Page",
@@ -45,31 +45,34 @@ const projects = [
 ];
 
 const Projects = () => {
+   const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
+  };
   return (
+
     <section
       id="projects"
       className="w-full mx-auto max-w-screen-2xl 
-      px-8 sm:px-10 md:px-10 lg:px-16 xl:px-20 
-      py-16 sm:py-20 md:py-28 lg:py-32
-      bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
+      px-6 sm:px-10 md:px-16 lg:px-20
+      py-8 md:py-12
+      section-gradient-tr"
     >
       {/* Title */}
       <motion.div
-        className=""
+        className="flex flex-col items-center justify-center text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-slate-100 font-medium
-        text-center mt-6 pb-4
-        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
-        leading-snug sm:leading-tight sm:tracking-tight">
+        <h2 className="heading-gradient"
+            variants={fadeUp}
+          >
           Featured Projects
         </h2>
-        <p className="text-slate-300 text-center
-mt-4 max-w-2xl text-base sm:text-lg md:text-xl
-pb-12
-">
+        <p className="paragraph-muted"
+            variants={fadeUp}
+          >
           A selection of recent projects that showcase my expertise in front-end development,
           UI animation, and design.
         </p>
@@ -88,7 +91,7 @@ pb-12
             0: { slidesPerView: 1 },
             1024: { slidesPerView: 1 },
           }}
-          className="projects-swiper md:mb-12"
+          className="projects-swiper mt-12 md:mb-12"
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
@@ -111,16 +114,15 @@ pb-12
 
                 {/* RIGHT: Content */}
                 <div className="flex flex-col justify-center text-justify md:text-left space-y-4">
-                  <h2 className="text-slate-100 font-medium
-        
-        text-2xl sm:text-3xl md:text-2xl lg:text-4xl max-w-2xl 
-        leading-snug sm:leading-tight sm:tracking-tight
-">
+                  <h3 className="heading-accent"
+            variants={fadeUp}
+          >
+
                     {project.title}
-                  </h2>
-                  <p className="text-slate-300 text-justify
-mt-4 max-w-2xl text-base sm:text-lg md:text-xl
-">
+                  </h3>
+                  <p className="paragraph-muted"
+            variants={fadeUp}
+          >
                     {project.description}
                   </p>
 
@@ -128,9 +130,9 @@ mt-4 max-w-2xl text-base sm:text-lg md:text-xl
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center md:justify-start gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl transition-all duration-300 shadow hover:shadow-lg mt-2"
+                    className="btn-primary mt-2"
                   >
-                    Live Demo <BsBoxArrowUpRight className="w-4 h-4" />
+                    Live Demo <BsBoxArrowUpRight className="pl-4 w-4 h-4" />
                   </Link>
                 </div>
               </motion.div>

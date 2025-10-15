@@ -18,14 +18,14 @@ const projects = [
       "Luxury Retreats es una experiencia web visualmente inmersiva diseñada para mostrar retiros de bienestar inspirados en el arte. El proyecto se centra en combinar un diseño elegante con un movimiento interactivo y fluido. Construido con Next.js y Framer Motion, el sitio presenta transiciones dinámicas, diseños responsivos y una estética limpia y moderna. Su paleta de degradados, animaciones suaves y estructura intuitiva guían a los visitantes a través de experiencias de retiro cuidadosamente curadas que combinan arte, mindfulness y relajación.",
     demoLink: "https://retreats.digitalartmariaherrera.com/",
   },
-  {
-    id: 2,
-    title: "E-Commerce Storefront",
-    image: "/images/projects/project2.png",
-    description:
-      "A modern e-commerce platform with smooth animations, product filtering, and secure checkout built using React and Stripe.",
-    demoLink: "https://example.com/project2",
-  },
+  // {
+  //   id: 2,
+  //   title: "E-Commerce Storefront",
+  //   image: "/images/projects/project2.png",
+  //   description:
+  //     "A modern e-commerce platform with smooth animations, product filtering, and secure checkout built using React and Stripe.",
+  //   demoLink: "https://example.com/project2",
+  // },
   // {
   //   id: 3,
   //   title: "Event Planner Landing Page",
@@ -48,19 +48,22 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-b from-[#0c0c1d] to-[#111132]"
+      className="w-full mx-auto max-w-screen-2xl 
+      px-6 sm:px-10 md:px-16 lg:px-20
+      py-8 md:py-12
+      section-gradient-tr"
     >
       {/* Title */}
       <motion.div
-        className="text-center mb-12"
+        className="flex flex-col items-center justify-center text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-300">
+        <h2 className="heading-gradient">
           Projectos
         </h2>
-        <p className="text-slate-100 max-w-2xl mx-auto">
+        <p className="paragraph-muted">
           Una selección de proyectos recientes que muestran mi experiencia en desarrollo front-end,
           animación de UI y diseño.
         </p>
@@ -86,7 +89,7 @@ const Projects = () => {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 250 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gradient-to-b from-transparent via-emerald-500/20 to-emerald-500/40 border-2 border-yellow-400/40 rounded-2xl overflow-hidden shadow-lg p-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8  rounded-2xl overflow-hidden shadow-lg"
               >
                 {/* LEFT: Screenshot */}
                 <div className="relative w-full h-64 md:h-96 rounded-lg flex items-center justify-centeroverflow-hidden">
@@ -102,10 +105,10 @@ const Projects = () => {
 
                 {/* RIGHT: Content */}
                 <div className="flex flex-col justify-center text-justify md:text-left space-y-4 px-2">
-                  <h3 className="text-2xl font-semibold text-slate-200">
+                  <h3 className="text-2xl heading-accent">
                     {project.title}
                   </h3>
-                  <p className="text-slate-100 text-base leading-relaxed">
+                  <p className="paragraph-muted">
                     {project.description}
                   </p>
 
@@ -113,9 +116,9 @@ const Projects = () => {
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center md:justify-start gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-xl transition-all duration-300 shadow hover:shadow-lg mt-2"
+                    className="btn-primary mt-2"
                   >
-                    Live Demo <BsBoxArrowUpRight className="w-4 h-4" />
+                    Live Demo <BsBoxArrowUpRight className="pl-4 w-4 h-4" />
                   </Link>
                 </div>
               </motion.div>

@@ -1,5 +1,100 @@
 @import "tailwindcss";
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  
+  background-color: #0c0c1d; /* your darkest gradient tone */
+}
+
+:root {
+  --text-accent: #f8fafc; /* yellow-500 */
+
+}
+@layer base {}
+/* hero */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl
+font-extrabold leading-tight 
+bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent
+;
+  }
+
+  /* h2 {
+    @apply 
+text-3xl md:text-4xl lg:text-5xl 
+font-extrabold leading-tight 
+bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent 
+
+  } */
+
+  /* h3 {
+    @apply text-lg text-emerald-400 uppercase font-extralight tracking-widest;
+  } */
+
+ 
+  /* a {
+    @apply text-emerald-400 hover:text-yellow-400 transition-colors duration-300;
+  } */
+
+
+/* ========================================
+   ⚙️ Reusable Utility Components
+<section className="section section-gradient-tr">
+   ======================================== */
+    /* Headings with gradient or accent styles */
+  .heading-gradient {
+    @apply text-3xl md:text-5xl font-extrabold leading-tight 
+    bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent;
+  }
+
+  .heading-accent {
+    @apply text-lg text-emerald-400 uppercase font-extralight tracking-widest;
+  }
+
+  /* Paragraph emphasis or highlight */
+  .paragraph-accent {
+    @apply text-yellow-500 text-base md:text-lg leading-relaxed max-w-2xl;
+  }
+
+  .paragraph-muted {
+    @apply text-slate-300 text-sm md:text-base leading-relaxed mt-4;
+  }
+    /* Button styling */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+    rounded-3xl bg-emerald-500 hover:bg-emerald-600 
+    text-white font-medium transition-all duration-300 shadow hover:shadow-lg;
+  }
+
+
+@layer components {
+  .section {
+    @apply w-full mx-auto h-auto lg:h-screen max-w-screen-2xl py-8  px-6 sm:px-10 md:px-16 lg:px-20;
+  }
+  .section-snap {
+    @apply snap-y snap-mandatory overflow-y-scroll  h-screen max-w-7xl w-full px-6 sm:px-10 md:px-16 lg:px-20 flex items-center justify-center ;
+  }
+  .section-gradient-tr {
+    @apply bg-gradient-to-tr  from-[#111132] to-[#0c0c1d];
+  }
+
+  .section-gradient-bl {
+    @apply bg-gradient-to-bl from-[#111132] to-[#0c0c1d];
+  }
+  .section-alt {
+    @apply bg-gradient-to-b from-[#111132] to-[#0c0c1d];
+  }
+
+ 
+
+
+  }
+
+  .btn-outline {
+    @apply border border-emerald-400 text-emerald-400 hover:bg-emerald-500 hover:text-white rounded-3xl px-6 py-3 transition-all duration-300;
+  }
+
+
 .active {
   color: red;
 }
@@ -42,9 +137,7 @@
   cursor: not-allowed;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 .swiper-slide-next,
 .swiper-slide-prev {

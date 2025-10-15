@@ -8,7 +8,7 @@ const pricingPlans = [
     title: "Pago Único, Sin Ediciones por el Cliente",
     clientType:
       "Este plan es para clientes que no necesitan hacer cambios por sí mismos. Me envías las actualizaciones por WhatsApp o correo y yo me encargo de todo.",
-    price: "300 - 600",
+    price: "800 - 1000",
     currency: "EUR",
     frequency: "Pago Único",
     // deliveryTime: "1 semana",
@@ -28,7 +28,7 @@ const pricingPlans = [
   {
     title: "El Cliente Puede Editar Contenido",
     // clientType: "Ideal for: Clients who want to update text/images themselves.",
-    price: "600 - 1000",
+    price: "1000 - 1500",
     currency: "EUR",
     frequency: "Pago Único",
     // deliveryTime: "10 days",
@@ -49,7 +49,7 @@ const pricingPlans = [
     title: "Soporte Completo + Mantenimiento",
     clientType:
       "Este es el plan VIP. Tú te enfocas en tu negocio, yo manejo la parte técnica. Obtienes ediciones, respaldos y soporte completo — sin preocupaciones.",
-    price: "1000+",
+    price: "1500+",
     currency: "EUR",
     frequency: "Pago Único",
     // deliveryTime: "10 days",
@@ -72,19 +72,23 @@ const PricingCards = () => {
   return (
     <div
       id="services"
-      className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-tl from-[#0c0c1d] to-[#111132]"
+      className="w-full mx-auto max-w-screen-2xl 
+      px-6 sm:px-10 md:px-16 lg:px-20
+      py-8 md:py-12
+      section-gradient-bl"
     >
-      <h2 className="text-md font-extrabold text-slate-100 sm:text-xl sm:leading-tight sm:tracking-tight text-center">
+      <div className="flex flex-col items-center justify-center text-center">
+      <h2 className="heading-gradient">
         Elige el plan que se adapta a tus necesidades
       </h2>
-      <p className="mt-2 text-center text-sm pt-2 md:pt-0 px-12 text-slate-300">
+      <p className="paragraph-muted">
         Ya sea que necesites un sitio simple de una página o una presencia en línea completamente gestionada,
         elige el plan que se ajuste a tus objetivos y presupuesto. Sin tarifas ocultas,
         sin estrés técnico.
       </p>
-
+</div>
       {/* Cards */}
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 py-5 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-8 py-5 ">
         {pricingPlans.map((plan) => (
           <div
             key={plan.title}

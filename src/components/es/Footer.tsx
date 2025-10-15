@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 const footerLinks: Record<string, { name: string; href: string }[]> = {
   Portfolio: [
@@ -31,8 +31,9 @@ const footerLinks: Record<string, { name: string; href: string }[]> = {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#0c0c1d] to-[#111132]">
-      <div className="mx-auto w-full px-6 pt-4 pb-8">
+    <footer className="section-gradient-tr">
+      <div className="w-full mx-auto max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-20
+      pb-8 md:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-12">
           {/* Brand Column */}
           <div className="px-4 lg:col-span-4">
@@ -55,16 +56,16 @@ const Footer: React.FC = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4">
+               <a
+                              href="https://www.facebook.com/profile.php?id=61580256954689"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-500 hover:bg-blue-500 hover:text-white transition-all duration-200"
+                            >
+                              <FaFacebookF className="w-5 h-5" />
+                            </a>
               <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-slate-500 hover:text-white transition-all duration-200"
-              >
-                <FaGithub className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/maria-herrera-336114382/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-500 hover:bg-blue-500 hover:text-white transition-all duration-200"
@@ -72,7 +73,7 @@ const Footer: React.FC = () => {
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com/digartmariaherrera?igsh=dnhic25wemtwZGs4"
+                href="https://www.instagram.com/digartmariaherrera/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-pink-600 hover:text-white transition-all duration-200"

@@ -1,4 +1,3 @@
-// src/components/legal/LegalPages.tsx
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -25,7 +24,7 @@ const defaultInfo: Info = {
   name: "Maria Herrera / digARt",
   taxId: "30.787.144-B",
   address: "Tenor Pedro LaVirgen, 4, Cordoba, Spain",
-  email: "mariaherreralope@gmail.com",
+  email: "digartmariaherrera@gmail.com",
   phone: "+34 692 962 356",
   hosting: "Vercel Inc.",
   websiteUrl: "https://digitalartmariaherrera.com",

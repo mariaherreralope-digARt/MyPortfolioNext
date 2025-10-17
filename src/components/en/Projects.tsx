@@ -13,7 +13,7 @@ const projects = [
   {
     id: 1,
     title: "Creative Portfolio Website",
-    image: "/images/project1.png",
+    image: "/images/Project1.png",
     description:
       "Luxury Retreats is a visually immersive web experience designed to showcase art-inspired wellness retreats. The project focuses on blending elegant design with smooth, interactive motion. Built with Next.js and Framer Motion, the site features dynamic transitions, responsive layouts, and a clean, modern aesthetic. Its gradient palette, soft animations, and intuitive structure guide visitors through curated retreat experiences that combine art, mindfulness, and relaxation.",
     demoLink: "https://retreats.digitalartmariaherrera.com/",

@@ -69,10 +69,8 @@ const pricingPlans = [
 ];
 
 const PricingCards = () => {
-     const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
-  };
+
+
   return (
     <div
       id="services"
@@ -83,12 +81,10 @@ const PricingCards = () => {
     >
       <div className="flex flex-col items-center justify-center text-center">
       <h2 className="heading-gradient"
-            variants={fadeUp}
           >
         Flexible Website Packages
       </h2>
       <p className="paragraph-muted"
-            variants={fadeUp}
           >
         Whether you just need a simple one-page site or a fully managed online
         presence, choose the plan that matches your goals and budget. No hidden
@@ -135,5 +131,4 @@ const PricingCards = () => {
     </div>
   );
 };
-
 export default PricingCards;

@@ -12,7 +12,27 @@ import NavbarEN from "@/components/en/NavbarEN";
 import Projects from "@/components/en/Projects";
  import Script from "next/script";
 
-<Script
+
+
+export const metadata = {
+  title: "Projects | Maria Herrera Portfolio",
+  description:
+    "Explore a curated selection of Maria Herrera’s front-end projects showcasing interactive, animated, and responsive web design.",
+     alternates: {
+    canonical: "https://digitalartmariaherrera.com/",
+    languages: {
+      'en': 'https://digitalartmariaherrera.com/',
+      'es': 'https://digitalartmariaherrera.com/es',
+    },
+  },
+};
+export default function HomePage() {
+
+  return (
+    <main
+      className="relative h-screen overflow-y-scroll scroll-smooth"
+    >
+      <Script
   id="structured-data"
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -30,25 +50,6 @@ import Projects from "@/components/en/Projects";
     }),
   }}
 />
-
-export const metadata = {
-  title: "Projects | Maria Herrera Portfolio",
-  description:
-    "Explore a curated selection of Maria Herrera’s front-end projects showcasing interactive, animated, and responsive web design.",
-     alternates: {
-    canonical: "https://digitalartmariaherrera.com/",
-    languages: {
-      'en': 'https://digitalartmariaherrera.com/',
-      'es': 'https://digitalartmariaherrera.com/es',
-    },
-  },
-};
-export default function HomePage(): JSX.Element {
-
-  return (
-    <main
-      className="relative h-screen overflow-y-scroll scroll-smooth"
-    >
       {/* Background gradient circle */}
       <div className="absolute -top-28 -left-28 w-[500px] h-[500px] bg-gradient-to-tr from-red-800/20 to-yellow-600/20 rounded-full blur-[80px] -z-10"></div>
 

@@ -45,10 +45,8 @@ const projects = [
 ];
 
 const Projects = () => {
-   const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
-  };
+
+ 
   return (
 
     <section
@@ -66,12 +64,10 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="heading-gradient"
-            variants={fadeUp}
           >
           Featured Projects
         </h2>
         <p className="paragraph-muted"
-            variants={fadeUp}
           >
           A selection of recent projects that showcase my expertise in front-end development,
           UI animation, and design.
@@ -115,13 +111,11 @@ const Projects = () => {
                 {/* RIGHT: Content */}
                 <div className="flex flex-col justify-center text-justify md:text-left space-y-4">
                   <h3 className="heading-accent"
-            variants={fadeUp}
           >
 
                     {project.title}
                   </h3>
                   <p className="paragraph-muted"
-            variants={fadeUp}
           >
                     {project.description}
                   </p>

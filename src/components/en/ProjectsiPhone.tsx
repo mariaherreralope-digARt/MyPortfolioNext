@@ -11,20 +11,20 @@ const ProjectsiPhone = () => {
   const openContactForm = () => setContactFormOpen(true);
   const closeContactForm = () => setContactFormOpen(false);
 
-  const containerVariants = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
-  };
+  // const containerVariants = {
+  //   hidden: {},
+  //   show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+  // };
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
-  };
+  // const fadeUp = {
+  //   hidden: { opacity: 0, y: 30 },
+  //   show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
+  // };
 
-  const slideInRight = {
-    hidden: { opacity: 0, x: 80 },
-    show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  };
+  // const slideInRight = {
+  //   hidden: { opacity: 0, x: 80 },
+  //   show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  // };
 
   return (
     <section
@@ -33,7 +33,7 @@ const ProjectsiPhone = () => {
     >
       <motion.div
         className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative pt-0 md:"
-        variants={containerVariants}
+        // variants={containerVariants}
         initial="hidden"
         whileInView="show"
       >
@@ -41,21 +41,21 @@ const ProjectsiPhone = () => {
         <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 px-10">
           <motion.h3
             className="heading-accent"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Full Responsive Websites
           </motion.h3>
 
           <motion.h2
             className="heading-gradient"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Mobile View
           </motion.h2>
 
           <motion.p
             className="paragraph-muted"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Websites that adapt perfectly to any mobile device, with
             fast-loading content, intuitive navigation, and clean animations for
@@ -65,7 +65,7 @@ const ProjectsiPhone = () => {
           <motion.button
             onClick={openContactForm}
             className="btn-primary mt-4"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Let’s Work Together
           </motion.button>
@@ -74,7 +74,7 @@ const ProjectsiPhone = () => {
         {/* RIGHT COLUMN */}
         <motion.div
           className="w-full md:w-1/2 flex justify-center pt-20 md:pt-0"
-          variants={slideInRight}
+          // variants={slideInRight}
         >
           <div className="relative w-[280px] md:h-[450px] h-[400px] mx-auto">
             {/* Mockup background */}

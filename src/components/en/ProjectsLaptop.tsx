@@ -12,20 +12,20 @@ const ProjectsLaptop = () => {
   const openContactForm = () => setContactFormOpen(true);
   const closeContactForm = () => setContactFormOpen(false);
 
-  const containerVariants = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
-  };
+  // const containerVariants = {
+  //   hidden: {},
+  //   show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+  // };
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
-  };
+  // const fadeUp = {
+  //   hidden: { opacity: 0, y: 30 },
+  //   show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
+  // };
 
-  const slideInRight = {
-    hidden: { opacity: 0, x: -80 },
-    show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  };
+  // const slideInRight = {
+  //   hidden: { opacity: 0, x: -80 },
+  //   show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  // };
 
   return (
     <section
@@ -34,14 +34,14 @@ const ProjectsLaptop = () => {
     >
       <motion.div
         className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative"
-        variants={containerVariants}
+        // variants={containerVariants}
         initial="hidden"
         whileInView="show"
       >
         {/* LEFT COLUMN - Laptop Mockup */}
         <motion.div
           className="w-full md:w-1/2 flex justify-center pt-7"
-          variants={fadeUp}
+          // variants={fadeUp}
         >
           <div className="relative w-[500px] md:h-[450px] h-[280px] mx-auto flex items-center justify-center mb-10 ">
             <ContainerComputer />
@@ -52,21 +52,21 @@ const ProjectsLaptop = () => {
         <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 md:px-10 md:pt-0">
           <motion.h3
             className="heading-accent cursor-default"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Modern Animated Websites
           </motion.h3>
 
           <motion.h2
             className="heading-gradient"  
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Desktop View
           </motion.h2>
 
           <motion.p
             className="paragraph-muted"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Websites designed for a full desktop experience, featuring smooth
             animations, thoughtful layouts, and an engaging user interface.
@@ -76,7 +76,7 @@ const ProjectsLaptop = () => {
           <motion.button
             onClick={openContactForm}
             className="btn-primary"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Let’s Work Together
           </motion.button>

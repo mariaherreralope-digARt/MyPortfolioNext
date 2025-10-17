@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
+    
     //   url: 'https://yourdomain.com/about',
     //   lastModified: new Date(),
     //   changeFrequency: 'monthly',

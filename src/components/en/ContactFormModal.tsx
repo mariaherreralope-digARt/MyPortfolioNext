@@ -37,7 +37,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           >
             <div className="flex justify-between items-center mb-4">
               <h1 className="text-2xl font-bold text-gray-600 dark:text-gray-100">
-                Let's Work Together
+                Let&apos;s Work Together
               </h1>
               <button
                 onClick={onClose}

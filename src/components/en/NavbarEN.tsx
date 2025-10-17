@@ -19,7 +19,7 @@ const NavbarEN: React.FC = () => {
     { href: "#services", label: "Services" },
     { href: "#newsletter", label: "Newsletter" },
   ];
-
+   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   return (
     <motion.nav className="sticky top-0 right-0 section-gradient-bl z-50">
       <div className="w-full mx-auto flex items-center justify-between max-w-7xl pt-5 px-6 sm:px-10 md:px-16 lg:px-20
@@ -48,22 +48,25 @@ const NavbarEN: React.FC = () => {
           className="hidden md:flex relative w-fit gap-3 rounded-3xl border-2 border-emerald-500 bg-transparent z-20"
         >
           {navLinks.map((link, index) => {
-            const ref = useRef<HTMLAnchorElement>(null);
+
             return (
               <a
-                key={index}
-                ref={ref}
-                href={link.href}
-                onClick={() => setActiveLink(link.href)}
-                onMouseEnter={() => {
-                  if (!ref.current) return;
-                  const { width } = ref.current.getBoundingClientRect();
-                  setCursorPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
-                }}
-                className="relative z-20 block cursor-pointer uppercase text-emerald-500 mix-blend-difference px-3 py-1.5 md:px-5 md:py-3 font-light text-xs"
-              >
-                {link.label}
-              </a>
+  key={index}
+  ref={(el: HTMLAnchorElement | null): void => {
+    linkRefs.current[index] = el
+  }}
+  href={link.href}
+  onClick={() => setActiveLink(link.href)}
+  onMouseEnter={() => {
+    if (!linkRefs.current[index]) return
+    const { width } = linkRefs.current[index]!.getBoundingClientRect()
+    setCursorPosition({ left: linkRefs.current[index]!.offsetLeft, width, opacity: 1 })
+  }}
+  className="relative z-20 block cursor-pointer uppercase text-emerald-500 mix-blend-difference px-3 py-1.5 md:px-5 md:py-3 font-light text-xs"
+>
+  {link.label}
+</a>
+
             );
           })}
 

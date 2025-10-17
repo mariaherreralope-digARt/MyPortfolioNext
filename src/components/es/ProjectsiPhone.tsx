@@ -11,20 +11,20 @@ const ProjectsiPhone = () => {
   const openContactForm = () => setContactFormOpen(true);
   const closeContactForm = () => setContactFormOpen(false);
 
-  const containerVariants = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
-  };
+  // const containerVariants = {
+  //   hidden: {},
+  //   show: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+  // };
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
-  };
+  // const fadeUp = {
+  //   hidden: { opacity: 0, y: 30 },
+  //   show: { opacity: 1, y: 0, transition: { duration: 1.8, ease: "easeOut" } },
+  // };
 
-  const slideInRight = {
-    hidden: { opacity: 0, x: 80 },
-    show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  };
+  // const slideInRight = {
+  //   hidden: { opacity: 0, x: 80 },
+  //   show: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  // };
 
   return (
     <section
@@ -33,7 +33,7 @@ const ProjectsiPhone = () => {
     >
       <motion.div
         className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between z-10 relative pt-20 md:pt-0"
-        variants={containerVariants}
+        // variants={containerVariants}
         initial="hidden"
         whileInView="show"
       >
@@ -41,21 +41,21 @@ const ProjectsiPhone = () => {
         <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-6 px-10">
           <motion.h2
             className="heading-accent"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Sitios web totalmente adaptables
           </motion.h2>
 
           <motion.h1
             className="heading-gradient"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Versión móvil
           </motion.h1>
 
           <motion.p
             className="paragraph-muted"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Páginas que se ajustan a la perfección a cualquier dispositivo móvil, con carga rápida, navegación intuitiva y animaciones limpias para una experiencia excelente en movimiento. Desarrolladas con React y Framer Motion.
           </motion.p>
@@ -63,7 +63,7 @@ const ProjectsiPhone = () => {
           <motion.button
             onClick={openContactForm}
             className="btn-primary mt-4"
-            variants={fadeUp}
+            // variants={fadeUp}
           >
             Trabajemos juntos
                       </motion.button>
@@ -72,7 +72,7 @@ const ProjectsiPhone = () => {
          {/* RIGHT COLUMN */}
           <motion.div
             className="w-full md:w-1/2 flex justify-center pt-7 md:pt-10"
-            variants={slideInRight}
+            // variants={slideInRight}
           >
             <div className="relative w-[280px] md:h-[450px] h-[400px] mx-auto">
               {/* Mockup background */}
